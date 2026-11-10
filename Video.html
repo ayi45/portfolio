@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photo &amp; Video | Anna Yi</title>
+<meta name="description" content="Anna Yi: photography, video and editing.">
+<link rel="icon" href="images/avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="Home.html"><img src="images/avatar.png" alt="">Anna Yi</a>
+    <div class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="About.html">About</a>
+      <div class="nav-drop current">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="work-menu">My work <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="nav-menu" id="work-menu">
+          <a href="Illustration.html">Illustration</a>
+          <a href="Design.html">Design</a>
+          <a href="Video.html" aria-current="page">Photo &amp; Video</a>
+          <a href="Social.html">Social Media</a>
+        </div>
+      </div>
+      <a href="Resume.html">Resume</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="label">● Rec · 03 / 04</span>
+    <h1 class="text-title">Photo &amp; Video</h1>
+    <p>Shooting and editing: from the first frame to the final cut.</p>
+  </div>
+</header>
+
+<main>
+  <!-- ============ 03 PHOTO & VIDEO ============ -->
+  <section id="photo">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="num">03</span>Photo &amp; Video</h2>
+        <span class="label">Behind the camera</span>
+      </div>
+
+      <div class="sub-head"><h3>Photography</h3><span class="label">Selected shots</span></div>
+      <!-- PHOTOS: to add one, copy a <figure class="photo"> block, put the image in images/photo/ and change the file name.
+           Add the class "tall" to the figure for a vertical photo. -->
+      <div class="photo-grid">
+        <figure class="photo tall">
+          <button class="zoom" type="button"><img src="images/photo/dorrance-field.jpg" alt="Sunlit empty stands and grass at Dorrance Field, UNC" loading="lazy"></button>
+          <figcaption>Dorrance Field · Golden hour</figcaption>
+        </figure>
+        <figure class="photo">
+          <button class="zoom" type="button"><img src="images/photo/student-section.jpg" alt="UNC student section in striped overalls and a ram hat cheering at the rail" loading="lazy"></button>
+          <figcaption>Student section · Game night</figcaption>
+        </figure>
+        <figure class="photo">
+          <button class="zoom" type="button"><img src="images/photo/heeligans-flag.jpg" alt="Fans waving a Heeligans flag under stadium lights" loading="lazy"></button>
+          <figcaption>Heeligans · Under the lights</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 EDITING ============ -->
+  <section id="editing">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="num">04</span>Photo &amp; Video Editing</h2>
+        <span class="label">Color · Cuts · Motion</span>
+      </div>
+      <!-- BEFORE / AFTER: swap the two image file names to show a different edit. -->
+      <div class="before-after">
+        <figure class="photo">
+          <span class="ba-tag">Before</span>
+          <button class="zoom" type="button"><img src="images/photo/xc-runner-before.jpg" alt="Unedited photo of a UNC cross-country runner, wide frame with lots of sky" loading="lazy"></button>
+          <figcaption>Straight out of camera</figcaption>
+        </figure>
+        <figure class="photo">
+          <span class="ba-tag after">After</span>
+          <button class="zoom" type="button"><img src="images/photo/xc-runner-after.jpg" alt="Edited photo of the same runner, cropped tight with warmer, richer color" loading="lazy"></button>
+          <figcaption>Cropped &amp; color corrected</figcaption>
+        </figure>
+      </div>
+      <div class="ba-notes">
+        <div class="case-body">
+          <p>Editing photos and footage from raw to finished: color and retouching in Lightroom and Photoshop, cutting in Premiere Pro, and motion graphics in After Effects.</p>
+          <ul class="software">
+            <li><img src="images/icons/photoshop.png" alt=""><span>Photoshop</span></li>
+            <li><img src="images/icons/premiere-pro.png" alt=""><span>Premiere Pro</span></li>
+            <li><img src="images/icons/after-effects.png" alt=""><span>After Effects</span></li>
+          </ul>
+          <span class="label">Also: Lightroom</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div>
+        <span class="label">Get in touch with me!</span>
+        <h2>Anna Yi</h2>
+        <div class="contact-row">
+          <span class="email" id="email">annayi.445@gmail.com</span>
+          <button class="copy" id="copy-btn" type="button">Copy email</button>
+        </div>
+      </div>
+      <div class="socials">
+        <h3>Social media</h3>
+        <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/annayi445" target="_blank" rel="noopener">@Annayi445</a></div>
+        <div><span>Instagram</span><a href="https://www.instagram.com/anna.yi_/" target="_blank" rel="noopener">@anna.yi_</a></div>
+        <div><span>TikTok</span><a href="https://www.tiktok.com/@swag_money_garfield" target="_blank" rel="noopener">@swag_money_garfield</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="label">© 2026 Anna Yi</span>
+    <span class="label">Hand-drawn in Chapel Hill ✎</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
