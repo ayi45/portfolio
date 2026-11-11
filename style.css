@@ -725,3 +725,7 @@ footer .wrap { padding-block: 22px; display: flex; justify-content: space-betwee
 .disciplines .label { font-size: .55rem; }
 .disciplines strong { font-size: .62rem; }
 .disciplines span:last-child { font-size: .64rem; }
+.badge .portrait { cursor: grab; }
+/* Home: more breathing room between the work cards and the LinkedIn strip */
+.connect { padding-top: 64px; }
+@media (max-width: 760px) { .connect { padding-top: 48px; } }

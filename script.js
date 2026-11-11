@@ -53,3 +53,45 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && drop.classList.contains('open')) { set(false); btn.focus(); } });
   drop.addEventListener('focusout', function (e) { if (!drop.contains(e.relatedTarget)) set(false); });
 })();
+
+// About: the headshot polaroid hangs from its lanyard and can be nudged with the cursor.
+// It plays a short settle-swing on load (CSS), then a small spring takes over: brushing the
+// mouse across it pushes it the way you moved, and it swings back to rest.
+(function () {
+  var card = document.querySelector('.badge .portrait');
+  if (!card || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var REST = -2, angle = REST, vel = 0, running = false, lastX = null, lastKick = 0;
+
+  function loop() {
+    var force = (REST - angle) * 0.015;    // softer pull back toward resting tilt (slower swing)
+    vel = (vel + force) * 0.78;           // heavy damping: eases out and back with no real rebound
+    angle += vel;
+    card.style.transform = 'rotate(' + angle.toFixed(2) + 'deg)';
+    if (Math.abs(vel) < 0.01 && Math.abs(angle - REST) < 0.02) { running = false; return; }
+    requestAnimationFrame(loop);
+  }
+  function kick(dv) {
+    vel += dv;
+    vel = Math.max(-0.6, Math.min(0.6, vel));
+    if (!running) { running = true; requestAnimationFrame(loop); }
+  }
+  function takeOver() { card.style.animation = 'none'; card.style.transform = 'rotate(' + angle + 'deg)'; }
+
+  // let the load swing finish first, then hand control to the spring
+  card.addEventListener('animationend', takeOver, { once: true });
+  setTimeout(takeOver, 4500);
+
+  card.addEventListener('pointerenter', function (e) {
+    var r = card.getBoundingClientRect();
+    // coming in from the left pushes the bottom right (counter-clockwise), and vice versa
+    var side = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
+    var now = Date.now();
+    if (now - lastKick > 700) { takeOver(); kick(side * 0.35); lastKick = now; }
+    lastX = e.clientX;
+  });
+  card.addEventListener('pointermove', function (e) {
+    if (lastX !== null) kick(-(e.clientX - lastX) * 0.002);
+    lastX = e.clientX;
+  });
+  card.addEventListener('pointerleave', function () { lastX = null; });
+})();
