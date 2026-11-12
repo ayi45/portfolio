@@ -772,3 +772,16 @@ footer .wrap { padding-block: 22px; display: flex; justify-content: space-betwee
 .posters.reel.landscape .poster img { aspect-ratio: 3 / 2; }
 @media (max-width: 700px) { .posters.reel.landscape .poster { flex-basis: 82vw; } }
 #editing .reel-wrap + .ba-notes { margin-top: 28px; }
+
+/* Rows show each piece whole: same height, natural width (no cropping) */
+.posters.reel .poster { flex: 0 0 auto; }
+.posters.reel .poster img { height: clamp(260px, 30vw, 340px); width: auto; max-width: none; aspect-ratio: auto; object-fit: contain; }
+.posters.reel.landscape .poster img { height: clamp(180px, 24vw, 280px); }
+.posters.reel .poster figcaption { width: 0; min-width: 100%; }
+@media (max-width: 700px) {
+  .posters.reel .poster { flex-basis: auto; }
+  .posters.reel .poster img { height: 62vw; max-height: 380px; }
+  .posters.reel.landscape .poster img { height: 54vw; }
+}
+.posters.reel .poster .zoom { width: auto; }
+.posters.reel .poster img { display: block; }
