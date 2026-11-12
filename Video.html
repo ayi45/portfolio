@@ -22,10 +22,10 @@
       <div class="nav-drop current">
         <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="work-menu">My work <span class="caret" aria-hidden="true">▾</span></button>
         <div class="nav-menu" id="work-menu">
-          <a href="Illustration.html">Illustration</a>
+          <a href="Social.html">Social Media</a>
           <a href="Design.html">Design</a>
           <a href="Video.html" aria-current="page">Photo &amp; Video</a>
-          <a href="Social.html">Social Media</a>
+          <a href="Illustration.html">Illustration</a>
         </div>
       </div>
       <a href="Resume.html">Resume</a>
@@ -77,18 +77,27 @@
         <h2><span class="num">04</span>Photo &amp; Video Editing</h2>
         <span class="label">Color · Cuts · Motion</span>
       </div>
-      <!-- BEFORE / AFTER: swap the two image file names to show a different edit. -->
-      <div class="before-after">
-        <figure class="photo">
-          <span class="ba-tag">Before</span>
-          <button class="zoom" type="button"><img src="images/photo/xc-runner-before.jpg" alt="Unedited photo of a UNC cross-country runner, wide frame with lots of sky" loading="lazy"></button>
-          <figcaption>Straight out of camera</figcaption>
-        </figure>
-        <figure class="photo">
-          <span class="ba-tag after">After</span>
-          <button class="zoom" type="button"><img src="images/photo/xc-runner-after.jpg" alt="Edited photo of the same runner, cropped tight with warmer, richer color" loading="lazy"></button>
-          <figcaption>Cropped &amp; color corrected</figcaption>
-        </figure>
+      <!-- EDITED SHOTS: to add one, put the image in images/photo/ and copy a <figure class="poster"> block. -->
+      <div class="reel-wrap">
+        <button class="reel-btn prev" type="button" aria-label="Scroll edited photos left">‹</button>
+        <div class="posters reel landscape" data-gallery="edits" data-nocaption tabindex="0" aria-label="Edited photos, scroll sideways">
+          <figure class="poster">
+            <button class="zoom" type="button"><img src="images/photo/xc-548.jpg" alt="UNC cross-country runner in Carolina blue racing past trees under a clear sky" loading="lazy"></button>
+          </figure>
+          <figure class="poster">
+            <button class="zoom" type="button"><img src="images/photo/xc-551.jpg" alt="UNC runner framed low against open blue sky" loading="lazy"></button>
+          </figure>
+          <figure class="poster">
+            <button class="zoom" type="button"><img src="images/photo/xc-549.jpg" alt="UNC runner checking a watch at the finish" loading="lazy"></button>
+          </figure>
+          <figure class="poster">
+            <button class="zoom" type="button"><img src="images/photo/xc-star-clips.jpg" alt="Close-up of a runner looking down, silver star clips in braided hair" loading="lazy"></button>
+          </figure>
+          <figure class="poster">
+            <button class="zoom" type="button"><img src="images/photo/fever-student-section.jpg" alt="Carolina Fever student section cheering at the rail with blue pom-poms at night" loading="lazy"></button>
+          </figure>
+        </div>
+        <button class="reel-btn next" type="button" aria-label="Scroll right">›</button>
       </div>
       <div class="ba-notes">
         <div class="case-body">
