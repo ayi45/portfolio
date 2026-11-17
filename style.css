@@ -842,3 +842,7 @@ footer .wrap { padding-block: 22px; display: flex; justify-content: space-betwee
   background: #fbf8f1 repeating-linear-gradient(0deg, transparent 0 15px, rgba(90, 120, 160, .12) 15px 16px);
   border: 1.5px solid var(--ink); border-radius: 2px; box-shadow: 3px 3px 0 var(--ink); rotate: 0.8deg;
 }
+
+/* Home hero fills the first screen, so "Check out my work" starts below the fold */
+.hero { min-height: calc(100vh - 66px); min-height: calc(100svh - 66px); display: grid; align-items: center; }
+.hero .wrap { padding-block: 24px 48px; }
