@@ -785,3 +785,60 @@ footer .wrap { padding-block: 22px; display: flex; justify-content: space-betwee
 }
 .posters.reel .poster .zoom { width: auto; }
 .posters.reel .poster img { display: block; }
+
+/* Square, paper-scrap buttons (site-wide) */
+.btn {
+  border-radius: 2px; border: 1.5px solid var(--ink); background: #fbf8f1; color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink); rotate: -0.6deg;
+  background-image: repeating-linear-gradient(0deg, transparent 0 13px, rgba(90, 120, 160, .12) 13px 14px);
+  transition: transform .15s ease, box-shadow .15s ease, rotate .15s ease;
+}
+.cta .btn:nth-child(even) { rotate: 0.7deg; }
+.btn.primary { background-color: #c9a77c; background-image: none; color: var(--ink); }
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); rotate: 0deg; background-color: #fbf8f1; color: var(--ink); }
+.btn.primary:hover { background-color: #c9a77c; }
+.btn:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--ink); }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; rotate: 0deg; } }
+
+/* Nav bubble → paper strip, matching the paper buttons */
+.nav-links {
+  border-radius: 2px; border: 1.5px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
+  background: #fbf8f1; backdrop-filter: none; rotate: -0.4deg;
+  background-image: repeating-linear-gradient(0deg, transparent 0 13px, rgba(90, 120, 160, .12) 13px 14px);
+}
+.nav-links > a, .nav-drop-btn { border-radius: 2px; border: 1.5px solid transparent; }
+.nav-links > a:hover, .nav-drop-btn:hover, .nav-drop:hover .nav-drop-btn, .nav-drop.open .nav-drop-btn { background: rgba(201, 167, 124, .3); }
+.nav-links > a[aria-current="page"], .nav-drop.current .nav-drop-btn {
+  background: #c9a77c; color: var(--ink); border-color: var(--ink); rotate: 1.2deg;
+}
+.nav-links > a:nth-child(2)[aria-current="page"] { rotate: -1.2deg; }
+
+/* Dropdown card: same ink outline + hard drop shadow as the nav strip and buttons */
+.nav-menu { border: 1.5px solid var(--ink); border-radius: 2px; box-shadow: 4px 4px 0 var(--ink); }
+
+/* LinkedIn card: paper scrap with ink outline + hard shadow, like the buttons */
+.li-card {
+  border: 1.5px solid var(--ink); border-radius: 2px; box-shadow: 4px 4px 0 var(--ink);
+  background: #fbf8f1 repeating-linear-gradient(0deg, transparent 0 17px, rgba(90, 120, 160, .12) 17px 18px);
+  border-left: 5px solid #0a66c2; rotate: -0.8deg; transform: none;
+  transition: transform .15s ease, box-shadow .15s ease, rotate .15s ease;
+}
+.li-card:hover, .li-card:focus-visible { rotate: 0deg; transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+.li-card:active { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--ink); }
+.li-avatar { border: 1.5px solid var(--ink); border-radius: 2px; }
+
+/* "Currently" card: ink outline + hard drop shadow */
+.card.currently { border: 1.5px solid var(--ink); border-radius: 2px; box-shadow: 4px 4px 0 var(--ink); }
+.card.currently:hover { transform: rotate(0deg) translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+.card.currently:has(.tiger:hover) { transform: rotate(var(--tilt, 0deg)); box-shadow: 4px 4px 0 var(--ink); }
+
+/* Skills cards: ink outline + hard drop shadow */
+.skill-cards .card { border: 1.5px solid var(--ink); border-radius: 2px; box-shadow: 4px 4px 0 var(--ink); }
+.skill-cards .card:hover { transform: rotate(0deg) translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+
+/* "Also:" line as a small paper scrap */
+.tools-more {
+  display: inline-block; width: fit-content; max-width: 100%; margin-top: 18px; padding: 8px 14px;
+  background: #fbf8f1 repeating-linear-gradient(0deg, transparent 0 15px, rgba(90, 120, 160, .12) 15px 16px);
+  border: 1.5px solid var(--ink); border-radius: 2px; box-shadow: 3px 3px 0 var(--ink); rotate: 0.8deg;
+}
